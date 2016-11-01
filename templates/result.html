@@ -1,0 +1,24 @@
+
+{% extends "template.html" %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+	<div class="list-group">
+	<h4 class="list-group-item-heading">Here are your search results: </h4>
+	<ul class="list-group">
+		{% for topic in topics%}
+			{% if topic[2] < 0.0 %}
+				<li class="list-group-item">@{{ topic[0]}}: {{ topic[1]}} <span class="label label-danger">Negative</span></li>
+			{% elif topic[2] >= 0.0 and topic[2] <= 0.5%}
+				<li class="list-group-item">@{{ topic[0]}}: {{ topic[1]}} <span class="label label-warning">Neutral</span></li>
+			{% else %}
+				<li class="list-group-item">@{{ topic[0]}}: {{ topic[1]}} <span class="label label-success">Positive</span></li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+	</div>
+{% endblock %}
+{% block footer %}
+	{{ super() }}
+{% endblock %}

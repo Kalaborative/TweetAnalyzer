@@ -1,0 +1,42 @@
+{% extends "template.html" %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="static/css/bootstrap.darkly.css">
+{% endblock %}
+{% block nav%}
+        <li><a href="/">Home <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href=" {{ url_for('id_finder')}}">ID Finder</a></li>
+{% endblock %}
+{% block content %}
+<center><div class="jumbotron">
+  <h1>Pop in screen name, pop out ID.</h1>
+  <p>Simply enter your Twitter username.</p>
+  <p><form action="#" method="POST"><div class="form-group">
+  <input class="form-control input-sm" type="text" name="inputSmall" placeholder="Username">
+<button type="submit" class="btn btn-info btn-lg">Submit</button>
+</div>
+</form>
+</p>
+{% if twitID %}
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">ID retrieval successful!</h3>
+  </div>
+  <div class="panel-body">
+    Your Twitter ID is <font size=20><pre>{{ twitID }}</pre></font>
+  </div>
+</div>
+{% elif errno %}
+<div class="panel panel-danger">
+	<div class="panel-heading">
+		<h3 class="panel-title">ID retrieval failure!</h3>
+	</div>
+	<div class="panel-body">
+		{{ errno[0][0]['message'] }}
+	</div>
+</div>
+{% endif %}
+</div>
+{% endblock %}
+{% block footer %}
+	{{ super() }}
+{% endblock %}

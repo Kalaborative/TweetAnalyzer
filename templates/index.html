@@ -1,0 +1,27 @@
+{% extends "template.html" %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+    <h1><font size="30">Tweet Analyzer!</font><img src=" {{ url_for('static', filename='images/twitter_icon.png') }}" width="30" height="30"></h1>
+    <p class=""><h3>
+      Welcome to the Tweet Analyzer. Enter the topics below and when you're ready press go. </h3>
+    </p>
+    <br>
+    <form class="form-horizontal" action="{{ url_for('show_tweets') }}" method="POST">
+    	<fieldset>
+    		<div class="form-group">
+  <div class="input-group">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-comment"></span></span>
+    <input type="text" class="form-control" name="qtops">
+    <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary">Go!</button>
+    </span>
+  </div>
+</div>
+    	</fieldset>
+    </form>
+{% endblock %}
+{% block footer %}
+	{{ super() }}
+{% endblock %}
