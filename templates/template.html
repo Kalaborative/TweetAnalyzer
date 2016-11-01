@@ -2,13 +2,14 @@
 <html>
 <head>
 	{% block head %}
-	<title>Tweet Analyzer! </title>
+	<title>Tweetalyze! </title>
 	<link rel="stylesheet" href="static/css/bootstrap.readable.css">
       <script src=" {{ url_for('static', filename='js/jquery.min.js') }} "></script>
     <script src=" {{ url_for('static', filename='js/bootstrap.min.js') }} "></script>
 	{% endblock %}
 </head>
 <body>
+{% block nav %}
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -23,20 +24,16 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        {% block nav%}
-        <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+      {% block active%}
+        <li><a href="/">Home <span class="sr-only">(current)</span></a></li>
         <li><a href=" {{ url_for('id_finder')}}">ID Finder</a></li>
-        {% endblock %}
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href=" {{ url_for('show_tweets') }}">Recent Tweets</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
+            <li><a href=" {{ url_for('news') }}">Recent Tweets</a></li>
             <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="#">Reverse ID Lookup</a></li>
+      {% endblock %}
           </ul>
         </li>
       </ul>
@@ -47,18 +44,19 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+        <li><a href="http://bevizionary.tk">Vizionary Webpage</a></li>
       </ul>
     </div>
   </div>
 </nav>
+{% endblock %}
 	<div class="container-fluid" id="content">
 		{% block content %}{% endblock %}
 	</div>
 		{% block footer %}
-		<p>Site progress:</p>
+		<p>Site progress: <a href="#" class="btn btn-success">Success</a></p>
 <div class="progress progress-striped active">
-  <div class="progress-bar progress-bar-success" style="width: 80%"></div>
+  <div class="progress-bar progress-bar-success" style="width: 100%"></div>
 </div>
 	    <p class="text-muted">Powered by Flask and Tweepy.</p>
 	{% endblock %}

@@ -1,10 +1,11 @@
 {% extends "template.html" %}
 {% block head %}
 <link rel="stylesheet" type="text/css" href="static/css/bootstrap.darkly.css">
+      <script src=" {{ url_for('static', filename='js/jquery.min.js') }} "></script>
+    <script src=" {{ url_for('static', filename='js/bootstrap.min.js') }} "></script>  
 {% endblock %}
 {% block nav%}
-        <li><a href="/">Home <span class="sr-only">(current)</span></a></li>
-        <li class="active"><a href=" {{ url_for('id_finder')}}">ID Finder</a></li>
+      {{ super() }}
 {% endblock %}
 {% block content %}
 <center><div class="jumbotron">

@@ -55,6 +55,12 @@ def show_tweets():
 	return render_template('tweets.html', user=moom)
 
 
+@app.route('/news')
+def news():
+	newtwt = tweepy.api.home_timeline()
+	return render_template('news.html', new=newtwt)
+
+
 @app.route('/id-finder', methods=["GET", "POST"])
 def id_finder():
 	found_ID = None
@@ -70,4 +76,4 @@ def id_finder():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

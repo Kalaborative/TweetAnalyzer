@@ -1,0 +1,18 @@
+{% extends "template.html" %}
+{% block head%}
+	<link rel="stylesheet" type="text/css" href="static/css/bootstrap.journal.css">
+{% endblock %}
+{% block nav %}
+	{{ super() }}
+{% endblock %}
+{% block content %}
+	{% for n in new%}
+		<blockquote>
+			<p> {{ n.text }}</p>
+			<small> @{{ n.user.screen_name }}, {{n.created_at }}</small>
+		</blockquote>
+	{% endfor%}
+{% endblock %}
+{% block footer %}
+	{{ super() }}
+{% endblock %}
