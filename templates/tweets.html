@@ -1,11 +1,18 @@
 {% extends "template.html" %}
 {% block head %}
+      <script src=" {{ url_for('static', filename='js/jquery.min.js') }} "></script>
+    <script src=" {{ url_for('static', filename='js/bootstrap.min.js') }} "></script>
     {{ super() }}
 {% endblock %}
 {% block content %}
+<div class="alert alert-dismissible alert-warning">
+  <button type="button" class="close" onclick="clearInterval(myVar)" data-dismiss="alert">&times;</button>
+  <h4>Done reading?</h4>
+  <p>Close this box to stop automatically refreshing this page.</a>.</p>
+</div>
 {% for u in user%}
 	<div class="alert alert-info">
-<strong>New message from </strong> @{{ u[0] }}!
+<strong>New message from </strong> @{{ u[0] }}! <span class="label label-default">{{ u[1] }}</span>
 </div>
 <div class="panel panel-default">
   <div class="panel-body">
@@ -13,6 +20,13 @@
   </div>
 </div>
 {% endfor %}
+<script type="text/javascript">
+	function myFunction() {
+		window.location.reload();
+	}
+	var myVar = window.setInterval(myFunction, 8000);
+</script>
+
 
 {% endblock %}
 {% block footer %}

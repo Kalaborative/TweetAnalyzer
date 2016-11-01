@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"bloc",
+				"blockquote\tTag"
+			],
+			[
 				"err",
 				"error_message\tstatement"
 			],
@@ -510,10 +514,6 @@
 			[
 				"conn",
 				"connect\tfunction"
-			],
-			[
-				"socra",
-				"SocrataItem\tclass"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "templates/index.html",
 			"settings":
 			{
-				"buffer_size": 919,
+				"buffer_size": 1106,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -646,13 +646,14 @@
 	],
 	"file_history":
 	[
-		"/Users/Jerry/projects/tweetanalyzer/pi.py",
 		"/Users/Jerry/projects/tweetanalyzer/app.py",
-		"/Users/Jerry/projects/tweetanalyzer/templates/finder.html",
-		"/Users/Jerry/projects/tweetanalyzer/templates/result.html",
 		"/Users/Jerry/projects/tweetanalyzer/templates/tweets.html",
 		"/Users/Jerry/projects/tweetanalyzer/templates/template.html",
+		"/Users/Jerry/projects/tweetanalyzer/templates/finder.html",
+		"/Users/Jerry/projects/tweetanalyzer/templates/news.html",
 		"/Users/Jerry/projects/tweetanalyzer/templates/index.html",
+		"/Users/Jerry/projects/tweetanalyzer/pi.py",
+		"/Users/Jerry/projects/tweetanalyzer/templates/result.html",
 		"/Users/Jerry/projects/tweetanalyzer/venv/lib/python2.7/site-packages/tweepy/streaming.py",
 		"/Users/Jerry/projects/tweetanalyzer/ts1.py",
 		"/Users/Jerry/projects/tweetanalyzer/venv/lib/python2.7/site-packages/flask_tweepy.py",
@@ -772,8 +773,7 @@
 		"/Users/Jerry/realpython/chapter2/ex2.5b.py",
 		"/Users/Jerry/realpython/chapter2/ex2.3b.py",
 		"/Users/Jerry/realpython/chapter2/ex2.3c.py",
-		"/Users/Jerry/realpython/chapter2/ex2.4b.py",
-		"/Users/Jerry/realpython/chapter2/ex2.4a.py"
+		"/Users/Jerry/realpython/chapter2/ex2.4b.py"
 	],
 	"find":
 	{
@@ -849,15 +849,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 919,
+						"buffer_size": 1106,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								694,
-								694
+								1013,
+								1013
 							]
 						],
 						"settings":
@@ -867,7 +867,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 204.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
