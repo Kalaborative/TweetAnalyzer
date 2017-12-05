@@ -7,8 +7,8 @@ import sqlite3
 c_key = "1Va9E6ca4zb43q9JWf8mfZafc"
 c_secret = "9tg89S9VcKf9AzfZh9CeMrsT8TjnbJN43RyTOxUX6uuddduE4W"
 
-a_token = "114579331-oJa6oT6dKmciwyCcAGs0JjkY783ylyS3RJXPFocK"
-a_secret = "vw7qWTONxEidKZnw3mVEKHD58uPF8NsyB19o2hCkX6jyN"
+a_token = "114579331-2Yg0Cni9ecvmiXW3xSAMtxb3SUzBCeokTDR4n7qV"
+a_secret = "WTnmBbrkqNFPhVH9EHirwR1Q8og0Ef3QVZabSZuwcZWrz"
 app = Flask(__name__)
 app.config.setdefault('TWEEPY_CONSUMER_KEY', c_key)
 app.config.setdefault('TWEEPY_CONSUMER_SECRET', c_secret)
